@@ -1,8 +1,8 @@
 name: comparativa
 
-#mgmt:
-  #network: snmp-gnmi
-  #ipv4-subnet: 172.100.100.0/24  
+mgmt:
+  network: snmp-gnmi
+  ipv4-subnet: 172.100.100.0/24  
   
 topology:
   nodes:
@@ -33,11 +33,15 @@ topology:
       #image: vrnetlab/arista_veos:4.35.1F
       #startup-config: configs/myconfig.txt      
 
-    #cisco-router:
-      #kind: cisco_iol
-      #mgmt-ipv4: 172.100.100.5
-      #image: docker.io/arthurk99/cisco-iol:17.15.01 
-      #startup-config: configs/config.partial  
+    prometheus:
+      kind: linux
+      mgmt-ipv4: 172.100.100.42
+      image: quay.io/prometheus/prometheus:v2.54.1
+      binds:
+        - config/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      cmd: --config.file=/etc/prometheus/prometheus.yml
+      ports:
+        - 9090:9090
               
     PC1:
       kind: linux
