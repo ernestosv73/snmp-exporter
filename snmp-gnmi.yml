@@ -10,21 +10,21 @@ topology:
     srlswitch:
       kind: nokia_srlinux
       image: ghcr.io/nokia/srlinux:24.10.1
-      type: ixrd3
+      type: ixr-d3
       startup-config: configs/srlswitch.cfg
 
     # Nokia SRL Linux Layer 2 Device
     srlswitch2:
       kind: nokia_srlinux
       image: ghcr.io/nokia/srlinux:24.10.1
-      type: ixrd3
+      type: ixr-d3
       startup-config: configs/srlswitch.cfg 
             
     # Nokia SRL Linux Router
     srlrouter:
       kind: nokia_srlinux
       image: ghcr.io/nokia/srlinux:24.10.1
-      type: ixrd3
+      type: ixr-d3
       startup-config: configs/srlrouter.cfg
       
     #arista-router:
