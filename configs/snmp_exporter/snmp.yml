@@ -1,0 +1,32 @@
+# generator.yml - Input for the SNMP Exporter config generator
+# Defines which MIBs and OIDs to export as Prometheus metrics
+
+auths:
+  # SNMPv2c community string authentication
+  public_v2:
+    community: public
+    version: 2
+
+  
+modules:
+  # Interface MIB - traffic counters, interface status, errors
+  if_mib:
+    walk:
+      - ifDescr
+      - ifType
+      - ifSpeed
+      - ifAdminStatus
+      - ifOperStatus
+      - ifHCInOctets
+      - ifHCOutOctets
+      - ifInErrors
+      - ifOutErrors
+      - ifInDiscards
+      - ifOutDiscards
+    lookups:
+      - source_indexes: [ifIndex]
+        lookup: ifDescr
+        drop_source_indexes: false
+
+
+  
