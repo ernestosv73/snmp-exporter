@@ -52,7 +52,13 @@ topology:
       image: docker.io/esanchezv/kaliipv6:latest
       exec:
          - ip -6 addr add 2001:db8:10::100/64 dev eth1
-
+    
+    snmp-exporter:
+    kind: linux
+    image: prom/snmp-exporter:latest
+    ports:
+      - 9116:9116
+    
     alpine:
       kind: linux
       image: esanchezv/alpine-python3:latest
