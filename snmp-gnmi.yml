@@ -56,8 +56,8 @@ topology:
     snmp-exporter:
       kind: linux
       image: prom/snmp-exporter:latest
-      binds:
-        - configs/snmp_exporter/snmp.yml:/etc/snmp_exporter/snmp.yml:ro
+      #binds:
+        #- configs/snmp_exporter/snmp.yml:/etc/snmp_exporter/snmp.yml:ro
       ports:
         - 9116:9116
     
