@@ -1,7 +1,7 @@
 name: comparativa
 
 mgmt:
-  network: snmp-gnmi
+  network: snmp-expo
   ipv4-subnet: 172.100.100.0/24  
   
 topology:
@@ -85,19 +85,14 @@ topology:
       image: esanchezv/alpine-python3:latest
       binds:
          - configs/snmp.sh:/root/snmp.sh
-         - configs/if-stats-netconf.py:/root/if-stats-netconf.py
-         - configs/if-stats-snmp-full.py:/root/if-stats-snmp-full.py
-         - configs/if-stats-netconf-v2.py:/root/if-stats-netconf-v2.py
-         - configs/if-stats-snmp-v2.py:/root/if-stats-snmp-v2.py
-         - configs/if-stats-snmp-v3.py:/root/if-stats-snmp-v3.py
-         - configs/gnmic-config.yml:/root/gnmic-config.yml
+         - configs/snmp-monitor.py:/root/snmp-monitor.py
       exec:
          - ip -6 addr add 2001:db8:20::100/64 dev eth1
          - mkdir /data
          - chmod +x /data
-         #- python3 -m pip config set global.break-system-packages true
-         #- chmod +x /root/snmp.sh
-         #- sh /root/snmp.sh      
+         - python3 -m pip config set global.break-system-packages true
+         - chmod +x /root/snmp.sh
+         - sh /root/snmp.sh      
             
     
   links:
