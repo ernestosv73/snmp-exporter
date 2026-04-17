@@ -22,11 +22,7 @@ apk add --no-cache nano
 sleep 1
 apk add --no-cache iperf3
 sleep 1
-apk add --no-cache curl
-sleep 1
 apk add --no-cache git
 sleep 1
 apk add --no-cache bash
-sleep 1
-bash -c "$(curl -sL https://get-gnmic.openconfig.net)"
 sleep 1
