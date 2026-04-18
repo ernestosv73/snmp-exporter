@@ -1,8 +1,8 @@
 name: comparativa
 
-#mgmt:
-  #network: snmp-expo
-  #ipv4-subnet: 172.100.100.0/24  
+mgmt:
+  network: snmp-expo
+  ipv4-subnet: 172.100.100.0/24  
   
 topology:
   nodes:
@@ -35,7 +35,7 @@ topology:
 
     prometheus:
       kind: linux
-      #mgmt-ipv4: 172.100.100.42
+      mgmt-ipv4: 172.100.100.42
       image: quay.io/prometheus/prometheus:v2.54.1
       binds:
         - config/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml:ro
@@ -45,7 +45,7 @@ topology:
 
     grafana:
       kind: linux
-      #mgmt-ipv4: 172.100.100.43
+      mgmt-ipv4: 172.100.100.43
       image: grafana/grafana:latest
       binds:
         - config/grafana/datasource.yml:/etc/grafana/provisioning/datasources/datasource.yaml:ro
