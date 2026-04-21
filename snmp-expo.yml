@@ -90,7 +90,9 @@ topology:
          - python3 -m pip config set global.break-system-packages true
          - chmod +x /root/snmp.sh
          - sh /root/snmp.sh      
-            
+    gNMIc:
+      kind: linux
+      image: docker.io/esanchezv/hellt-gnmic:latest       
     
   links:
     - endpoints: ["srlrouter:e1-1", "srlswitch2:e1-1"]
@@ -100,8 +102,8 @@ topology:
       mtu: 1500
     - endpoints: ["PC3:eth1", "srlswitch2:e1-4"]
       mtu: 1500  
-    - endpoints: ["alpine:eth1", "srlswitch2:e1-5"]
-      mtu: 1500  
+    #- endpoints: ["alpine:eth1", "srlswitch2:e1-5"]
+      #mtu: 1500  
       
     
      
