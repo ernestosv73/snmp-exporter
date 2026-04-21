@@ -104,21 +104,13 @@ topology:
             
     
   links:
-    - endpoints: ["srlrouter:e1-1", "srlswitch:e1-1"]
-      #mtu: 1500
-    #- endpoints: ["arista-router:eth1", "srlswitch:e1-2"]
-      #mtu: 1500
-    #- endpoints: ["cisco-router:Ethernet0/1", "srlswitch:e1-3"]
-      #mtu: 1500
-    - endpoints: ["traffic-gen:eth1", "srlswitch:e1-5"]
-      mtu: 1500
+    - endpoints: ["srlrouter:e1-1", "srlswitch2:e1-1"]
     - endpoints: ["PC1:eth1", "srlswitch2:e1-2"]
       mtu: 1500
     - endpoints: ["PC2:eth1", "srlswitch2:e1-3"]
       mtu: 1500
     - endpoints: ["PC3:eth1", "srlswitch2:e1-4"]
       mtu: 1500  
-    - endpoints: ["srlrouter:e1-2", "srlswitch2:e1-1"]  
     - endpoints: ["alpine:eth1", "srlswitch2:e1-5"]
       mtu: 1500  
       
