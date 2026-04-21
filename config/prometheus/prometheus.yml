@@ -7,7 +7,7 @@ scrape_configs:
     # Prometheus hace scrape al SNMP Exporter cada 30 segundos.
     # El exporter consulta al dispositivo vía SNMPv2c y devuelve
     # las métricas en formato Prometheus text exposition.
-    scrape_interval: 5s
+    scrape_interval: 30s
     # scrape_timeout: 10s
 
     static_configs:
