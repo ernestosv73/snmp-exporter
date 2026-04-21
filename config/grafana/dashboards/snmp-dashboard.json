@@ -79,7 +79,7 @@
               }
             ]
           },
-          "unit": "percent"
+          "unit": "pps"
         },
         "overrides": []
       },
@@ -186,7 +186,7 @@
               }
             ]
           },
-          "unit": "percent"
+          "unit": "pps"
         },
         "overrides": []
       },
@@ -293,7 +293,7 @@
               }
             ]
           },
-          "unit": "percent"
+          "unit": "pps"
         },
         "overrides": []
       },
@@ -362,6 +362,6 @@
   "timezone": "browser",
   "title": "New dashboard",
   "uid": "gxqnls",
-  "version": 6,
+  "version": 9,
   "weekStart": ""
 }
