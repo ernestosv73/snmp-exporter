@@ -44,7 +44,7 @@ topology:
       binds:
         - config/grafana/datasource.yml:/etc/grafana/provisioning/datasources/datasource.yaml:ro
         - config/grafana/dashboards.yml:/etc/grafana/provisioning/dashboards/dashboards.yaml:ro
-        #- config/grafana/dashboards:/var/lib/grafana/dashboards
+        - config/grafana/dashboards:/var/lib/grafana/dashboards
       ports:
         - 3000:3000
       env:        
