@@ -550,7 +550,7 @@
             "uid": "PBFA97CFB590B2093"
           },
           "editorMode": "code",
-          "expr": "rate(ifHCOutOctets{ifName=\"ethernet-1/1\"}[1m]) * 8",
+          "expr": "rate(ifHCOutOctets{ifName=\"ethernet-1/2\"}[1m]) * 8",
           "instant": false,
           "legendFormat": "__auto",
           "range": true,
