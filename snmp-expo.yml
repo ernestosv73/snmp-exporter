@@ -72,6 +72,17 @@ topology:
     PC3:
       kind: linux
       image: docker.io/esanchezv/kaliipv6:latest  
+
+    iperf-server:
+      kind: linux
+      image: docker.io/esanchezv/kaliipv6:latest
+      binds:
+        - scripts/:/root
+      exec:
+        - chmod +x /root/install-iperf3.sh
+        - sh /root/install-iperf3.sh
+        - ip -6 addr add 2001:db8:dc::10/64 dev eth1
+        - ip -6 route add default via 2001:db8:dc::1  
     
         
     snmp-exporter:
@@ -105,8 +116,7 @@ topology:
       mtu: 1500
     - endpoints: ["PC3:eth1", "srlswitch2:e1-4"]
       mtu: 1500  
-    #- endpoints: ["alpine:eth1", "srlswitch2:e1-5"]
-      #mtu: 1500  
+    - endpoints: ["srlrouter:e1-2", "iperf-server:eth1"]
       
     
      
