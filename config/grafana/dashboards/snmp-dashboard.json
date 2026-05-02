@@ -1247,7 +1247,7 @@
           "refId": "B"
         }
       ],
-      "title": "IN Multicast Pkts",
+      "title": "irate() In Multicast Pkts",
       "type": "timeseries"
     },
     {
@@ -1354,7 +1354,7 @@
           "refId": "B"
         }
       ],
-      "title": "Out Multicast Pkts",
+      "title": "irate() Out Multicast Pkts",
       "type": "timeseries"
     },
     {
@@ -1461,7 +1461,7 @@
           "refId": "B"
         }
       ],
-      "title": "IN Multicast Pkts con rate",
+      "title": "rate() In Multicast Pkts",
       "type": "timeseries"
     },
     {
@@ -1568,7 +1568,7 @@
           "refId": "B"
         }
       ],
-      "title": "Out Multicast Pkts con rate",
+      "title": "rate() Out Multicast Pkts",
       "type": "timeseries"
     }
   ],
